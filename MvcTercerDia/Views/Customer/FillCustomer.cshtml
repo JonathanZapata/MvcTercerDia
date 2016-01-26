@@ -1,0 +1,21 @@
+﻿@model MvcTercerDia.Models.Customer
+
+@{
+    ViewBag.Title = "Ingreso de Clientes";
+}
+
+<h2>Ingreso de Clientes</h2>
+<div>
+    @using (Html.BeginForm("CreateCustomer", "Customer", FormMethod.Post)) { 
+        @Html.LabelFor(model => model.Código, "Código:")
+        @Html.TextBoxFor(model => model.Código)
+        <br/>
+        @Html.LabelFor(model => model.Nombre,"Name:")
+        @Html.TextBoxFor(model => model.Nombre)
+        <br/>
+        @Html.LabelFor(model => model.Apellido,"Last Name:")
+        @Html.TextBoxFor(model => model.Apellido)
+        <br/>
+        <input type="submit" value="Enviar"/>
+    }
+</div>

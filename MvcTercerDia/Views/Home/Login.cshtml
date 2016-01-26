@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<div class="jumbotron">
+@{Html.BeginForm("Index", "Home", FormMethod.Post);}
+    Usuario:
+    @Html.TextBox("txtUserName") <br/>
+    Clave:
+    @Html.TextBox("txtPassword")<br/>
+    <input type="submit" value="Login"/><br/>
+@{Html.EndForm();}
+
+</div>
